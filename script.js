@@ -5,7 +5,7 @@ let masterPlay = document.getElementById('masterPlay');
 let progressBar = document.getElementById('progressBar');
 let playing =document.getElementById('playing');
 let songs = [
-    { songName: "Smack That", filePath: "F:\Assignment 1\songs\SmackThat.mp3", coverPath: "covers/smackThat.jpg" },
+    { songName: "Smack That", filePath: "F:\\Assignment 1\\songs\\SmackThat.mp3", coverPath: "covers/smackThat.jpg" }
     /*{ songName: "Beautiful", filePath: "F:\Assignment 1\songs\Beautiful.mp3", coverPath: "covers\Beautiful.png" },
     *{ songName: "Smack That", filePath: "songs/SmackThat.mp3", coverPath: "covers/smackThat.jpg" },
     { songName: "Smack That", filePath: "songs/SmackThat.mp3", coverPath: "covers/smackThat.jpg" },
@@ -32,10 +32,28 @@ masterPlay.addEventListener('click', ()=>{
         playing.style.opacity = 0;
     }
 })
+/* progressBar is HTML UI so, in JS it doesn't work meaning, progressBar just shows the design of the bar nothing else. For this we use audio.Elment
+since it used to embed sound content in documents.
 progressBar.addEventListener('timeupdate', ()=>{
-console.log('timeupdate',progressBar );
+   
+    console.log('timeupdate');
 
-let progressBar = parseInt((audio.currentTime/audio.duration)*100);
-    console.log('timeupdate',progressBar);
+    /*progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+   
+            console.log(progress);
+            progressBar.value = progress;
+    console.log('timeupdate', progress);   
+})*/
+
+audioElement.addEventListener('timeupdate', () => {
+    console.log('timeupdate');
     
+    let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+    
+    progressBar.value = progress;
+    console.log('timeupdate', progress);
+});
+
+audioElement.addEventListener('input',()=>{
+  audioElement.currentTime= (progressBar.value /100) * audioElement.duration;
 })
