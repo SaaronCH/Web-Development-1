@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     background-color: azure;
 }
@@ -21,6 +22,7 @@ nav ul
     list-style-type: none;
     background-color: black;
     flex-direction: row;
+    float: center;
     padding: 5px;
 }
 
@@ -28,9 +30,11 @@ nav ul li
 {
     color: white; 
     padding: 0 12px;
-    
+    display: flex;
     align-items: center;
+    
 }
+nav ul li
 
 .brand
 {
