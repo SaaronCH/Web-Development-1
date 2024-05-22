@@ -53,6 +53,6 @@ audioElement.addEventListener('timeupdate', () => {
     console.log('timeupdate', progress);
 });
 
-audioElement.addEventListener('input',()=>{
-  audioElement.currentTime = (progressBar.value /100) * audioElement.duration;
+progressBar.addEventListener('input', () => {
+    audioElement.currentTime = (progressBar.value / 100) * audioElement.duration;
 });

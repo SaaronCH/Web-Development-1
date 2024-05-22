@@ -1,151 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    background-color: azure;
+}
 
-    body{
-        background-color: azure;
-    }
-    
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav
-    {
-        font-family: "Playfair", serif;
-    }
-    
-    nav ul
-    {
-        display: flex;
-        align-items: center; 
-        list-style-type: none;
-        background-color: black;
-        flex-direction: row;
-        float: center;
-        padding: 5px;
-    }
-    
-    nav ul li 
-    {
-        color: white; 
-        padding: 0 12px;
-        display: flex;
-        align-items: center;
-        
-    }
-    nav ul li:first-of-type + li {
-        margin-left: 65%;
-    }
-    
-    .brand
-    {
-        display: flex;
-        align-items: center;
-        font-weight: bolder;
-        font-size: 1.4rem;
-    }
-    
-    .brand img
-    {
-        width: 44px;
-        padding: 0 8px;
-    }
-    
-    .box
-    {
-        min-height:70vh;
-        background-color: black;
-        color: white;
-        font-family: "Sedan SC", serif;
-        margin: 23px auto;
-        width: 70%;
-        border-radius: 11px;
-        padding:10px;
-        background-image: url('8miles.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-    
-    }
-    
-    .bottom
-    {
-        position: sticky;
-        height: 80px;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        bottom: 0;
-        flex-direction: column;
-    }
-    
-    .icons
-    {
-        margin-top: 15px;
-        
-    }
-    
-    .icons i
-    {
-        cursor: pointer;
-        
-    }
-    
-    #progressBar
-    {
-        width: 148vh;
-        cursor: pointer;
-    }
-    
-    .songsContainer
-    {
-        margin-top: 25px;
-    }
-    .songsName
-    {
-        height: 40px;
-        display: flex;
-        background-color: white;
-        width: 30%;
-        color: black;
-        margin: 12px 0px;;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 34px;
-    
-    }
-    
-    .songsName img
-    {
-        width: 30px;
-        margin: 0 23px;
-        border-radius: 34px;
-        
-    }
-    
-    .time
-    {
-        margin: 0 23px;
-        cursor: pointer;
-    
-    }
-    
-    .songInfo
-    {
-        position: absolute;
-        left: 15vw;
-        font-family: "Sedan SC", serif;
-    }
-    
-    .songInfo img
-    {
-        opacity: 0;
-        transition: opacity 1s ease-in;
-    }
-    
+* {
+    margin: 0;
+    padding: 0;
+}
 
+nav {
+    font-family: "Playfair", serif;
+}
 
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background-color: black;
+    padding: 5px;
+}
+
+nav ul li {
+    color: white;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:first-of-type + li 
+{
+    margin-left: 65%;
+}
+
+nav ul .brand 
+{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+nav ul .brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+nav ul .spacer {
+    flex-grow: 1;
+}
+
+.box {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: "Sedan SC", serif;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 11px;
+    padding: 10px;
+    background-image: url('8miles.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.bottom {
+    position: sticky;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    bottom: 0;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#progressBar {
+    width: 148vh;
+    cursor: pointer;
+}
+
+.songsContainer {
+    margin-top: 25px;
+}
+
+.songsName {
+    height: 40px;
+    display: flex;
+    background-color: white;
+    width: 30%;
+    color: black;
+    margin: 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songsName img {
+    width: 30px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.time {
+    margin: 0 23px;
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 15vw;
+    font-family: "Sedan SC", serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
